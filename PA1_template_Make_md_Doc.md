@@ -29,7 +29,7 @@ par(mfrow=c(1,1))
 hist(byDay, main="CHART 1:\nHistogram of Steps Taken \nEach Day")
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-2-1.png)<!-- -->
+![](unnamed-chunk-2-1.png)<!-- -->
 
 ``` r
 #Calculate and plot the mean and median steps by day.
