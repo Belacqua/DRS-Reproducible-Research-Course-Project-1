@@ -51,7 +51,7 @@ par(mfrow=c(1,1))
 plot(byInterval, main="CHART 3:\nTime series of Steps Taken\nBy Time of Day Interval",type = "l",col="darkred")
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-3-1.png)<!-- -->
+![](unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
 #Optional Linear Trend line, not included with the current chart.
@@ -76,7 +76,7 @@ points(maxINterval,pch=3, col="red",cex=3)
 title( main=list(c("CHART 4: Max. Average Steps Occur at 5-Minute Time Interval ",maxINtervalName),col="red"),xlab="Distribution of Average Steps for Each Time Interval.\nAt time interval 835, average steps were 206.2")
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-4-1.png)<!-- -->
+![](unnamed-chunk-4-1.png)<!-- -->
 
 Next, create Charts 5-7, **Calculate and report the missing value count, and Build Code to impute missing values, and create a revised Histogram and Mean and Median Chart with the Imputed data included.** by replacing missing observations of step counts with the respective average for each of the corresoponding observed intervals.
 
@@ -96,7 +96,7 @@ par(mfrow=c(1,1))
 barplot(c(RowsNA,RowsAll), main="CHART 5:\nNumber of Missing Rows",col = c("darkslateblue","grey"), names.arg=c("2,304 Missing Rows","17,568 Total Rows"))
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-5-1.png)<!-- -->
+![](unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 #Next, impute Values by merging interval averages with rows missing step counts.
@@ -109,7 +109,7 @@ byDayImputed<-tapply(WalkDataImputed$steps,WalkDataImputed$date,sum)
 hist(byDay, main="CHART 6:\nHistogram of Steps Taken Each Day\nWith Missing Values Imputed as Average for each Interval")
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-5-2.png)<!-- -->
+![](unnamed-chunk-5-2.png)<!-- -->
 
 ``` r
 #Create Chart 7, Calculate and plot the mean and median steps by day.
@@ -120,7 +120,7 @@ par(mfrow=c(1,1))
 barplot(c(byDayMeanImputed,byDayMedianImputed), main="CHART 7:\nMean and Median Number of Daily Steps Taken\nWith Missing Values Imputed as Average for each Interval",col = c("lightblue", "darkolivegreen1"), names.arg=c("Mean=10,766.2","Median=10,765"), xlab="NOTE: No Change in Mean or Median", ylim=c(10760,10770))
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-5-3.png)<!-- -->
+![](unnamed-chunk-5-3.png)<!-- -->
 
 Finally, Create Chart 8: **Calculate and plot a Comparison of Weekday vs. Weekend Step counts.**
 
@@ -155,6 +155,6 @@ library(lattice)
 xyplot(AveSteps ~ interval | TimePeriod, data = WalkDataImputed.SMRY, layout = c(1, 2),type = "l")
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-6-1.png)<!-- -->
+![](unnamed-chunk-6-1.png)<!-- -->
 
 **Thank you. This is the end of the report**
