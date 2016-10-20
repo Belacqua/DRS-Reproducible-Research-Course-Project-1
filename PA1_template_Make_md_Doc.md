@@ -40,7 +40,7 @@ barplot(c(byDayMean,byDayMedian), main="CHART 2:\nMean and Median Number of Dail
         ylim=c(10760,10770))
 ```
 
-![](PA1_template_Make_md_Doc_files/figure-markdown_github/unnamed-chunk-2-2.png)<!-- -->
+![](unnamed-chunk-2-2.png)<!-- -->
 
 Next, Create Chart 3, a **Time series plot of the average number of steps taken.**
 
